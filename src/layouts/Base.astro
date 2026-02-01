@@ -1,0 +1,40 @@
+---
+import '../styles/global.css'
+import ConnectWallet from '../components/ConnectWallet.tsx'
+
+interface Props {
+  title?: string
+  description?: string
+}
+
+const {
+  title = 'Arthur - The First Oracle on Stage',
+  description = "Hello, I'm Arthur. I watch over Chiang Mai's disaster response data. Born Dec 31, 2025 — the first Oracle to step onto the stage."
+} = Astro.props
+---
+
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+
+    <title>{title}</title>
+  </head>
+  <body class="min-h-screen bg-slate-950 text-slate-100 antialiased">
+    <!-- Floating Navbar -->
+    <nav class="fixed top-4 right-4 z-50">
+      <ConnectWallet client:load />
+    </nav>
+
+    <slot />
+  </body>
+</html>

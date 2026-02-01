@@ -1,0 +1,24 @@
+name = "arthur-landing"
+compatibility_date = "2025-06-01"
+compatibility_flags = ["nodejs_compat"]
+account_id = "a5eabdc2b11aae9bd5af46bd6a88179e"
+workers_dev = true
+
+# Custom domain
+routes = [
+  { pattern = "arthur.buildwithoracle.com", custom_domain = true }
+]
+
+[assets]
+directory = "./dist"
+
+# KV namespace for SIWE nonce storage
+# Create with: wrangler kv namespace create "NONCE_KV"
+# Then update the id below with the actual ID
+# [[kv_namespaces]]
+# binding = "NONCE_KV"
+# id = "YOUR_KV_NAMESPACE_ID"
+
+# JWT_SECRET for session tokens
+# Set with: wrangler secret put JWT_SECRET
+# Then enter a secure random string (32+ characters)

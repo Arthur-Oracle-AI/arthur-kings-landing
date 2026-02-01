@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <!-- Background -->
+  <rect width="128" height="128" rx="24" fill="#1e293b"/>
+
+  <!-- 3-point sharp crown -->
+  <path d="M20 82 L20 50 L40 65 L64 28 L88 65 L108 50 L108 82 Z" fill="#f59e0b"/>
+</svg>
