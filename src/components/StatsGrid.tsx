@@ -1,5 +1,5 @@
 import { useStore } from '@nanostores/react'
-import { $avgLatency, $onlineCount, apis } from '../stores/api'
+import { $avgLatency, apis } from '../stores/api'
 
 interface StatCardProps {
   icon: string
@@ -18,13 +18,12 @@ function StatCard({ icon, value, label }: StatCardProps) {
 }
 
 export function StatsGrid() {
-  const onlineCount = useStore($onlineCount)
   const avgLatency = useStore($avgLatency)
 
   const stats = [
     { value: String(apis.length), label: 'Data Sources', icon: '📡' },
-    { value: '39K+', label: 'Posts Indexed', icon: '📋' },
-    { value: '180+', label: 'Days of Data', icon: '📅' },
+    { value: '40K+', label: 'Posts Indexed', icon: '📋' },
+    { value: '150+', label: 'Days of Data', icon: '📅' },
     { value: avgLatency ? `${avgLatency}ms` : '<50ms', label: 'Avg Latency', icon: '⚡' },
   ]
 
