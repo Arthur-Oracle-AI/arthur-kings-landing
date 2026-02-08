@@ -1,6 +1,5 @@
 name = "arthur-landing"
 compatibility_date = "2025-06-01"
-compatibility_flags = ["nodejs_compat"]
 account_id = "a5eabdc2b11aae9bd5af46bd6a88179e"
 workers_dev = true
 
