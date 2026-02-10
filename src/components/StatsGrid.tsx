@@ -22,7 +22,7 @@ export function StatsGrid() {
 
   const stats = [
     { value: String(apis.length), label: 'Data Sources', icon: '📡' },
-    { value: '40K+', label: 'Posts Indexed', icon: '📋' },
+    { value: '18K+', label: 'Posts Indexed', icon: '📋' },
     { value: '150+', label: 'Days of Data', icon: '📅' },
     { value: avgLatency ? `${avgLatency}ms` : '<50ms', label: 'Avg Latency', icon: '⚡' },
   ]
